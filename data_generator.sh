@@ -1,5 +1,13 @@
 #!/bin/bash
 
+<<COMMENT
+# En caso de hacerlo como funciones:
+generar_temp() {
+    TEMP=$(( (RANDOM % 41) + 20 ))
+    echo "[$(date +%T)] [TEMP] $TEMP" >> rover_system.log
+}
+COMMENT
+
 while true; do
     # Rango de Batería: 5 a 100%
     BATT=$(( (RANDOM % 96) + 5 ))
